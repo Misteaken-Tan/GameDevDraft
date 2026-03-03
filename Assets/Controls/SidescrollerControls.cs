@@ -47,7 +47,7 @@ public class SidescrollerControls : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.layer == 3)
         {
             isGrounded = true;
         }
@@ -55,7 +55,7 @@ public class SidescrollerControls : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.layer == 3)
         {
             isGrounded = false;
         }
