@@ -1,0 +1,46 @@
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MainLobby : MonoBehaviour
+{
+    
+    public void Level()
+    {
+        Debug.Log("Level Scene");
+        SceneManager.LoadScene(3, LoadSceneMode.Single);
+    }
+
+    public void Menu()
+    {
+        Debug.Log("Menu Scene");
+        SceneManager.LoadScene(0,LoadSceneMode.Single);
+    }
+
+    public void Collection()
+    {
+        Debug.Log("Collection Scene");
+        SceneManager.LoadScene(4,LoadSceneMode.Single);
+    }
+
+    public void StartUI()
+    {
+        Debug.Log("Start UI");
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
+    }
+
+    public void SettingsUI()
+    {
+        Debug.Log("Settings UI");
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
+    }
+
+    public void Exit()
+    {
+        Debug.Log("The game has closed!");
+        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+}
