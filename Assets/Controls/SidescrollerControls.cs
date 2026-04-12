@@ -17,6 +17,9 @@ public class SidescrollerControls : MonoBehaviour
     //Check if Player is on Ground
     public bool isGrounded = true;
 
+    float hAxis;
+    public bool mobileControls;
+
     //Gravity
     public float BaseGravity = 2;
     public float MaxFallSpeed = 18f;
@@ -32,7 +35,7 @@ public class SidescrollerControls : MonoBehaviour
     {
 
         //Store Horizontal Axis
-        float hAxis = Input.GetAxis("Horizontal");
+       if(!mobileControls) hAxis = Input.GetAxis("Horizontal");
 
         //Set Velocity
         rb.linearVelocity = new Vector2(hAxis * moveSpeed, rb.linearVelocity.y);
@@ -43,6 +46,30 @@ public class SidescrollerControls : MonoBehaviour
         Gravity();
 
 
+    }
+
+    public void jump()
+    {
+        // We check isGrounded here so the button only works when on the floor
+        if (isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            isGrounded = false; // Prevents double jumping immediately
+        }
+    }
+
+    public void moveLeft()
+    {
+        hAxis = -1; // Move left
+    }
+    public void moveRight()
+    {
+       hAxis = 1; // Move right
+    }
+
+    public void stopMoving()
+    {   
+        hAxis = 0; // Stop horizontal movement
     }
 
     private void OnTriggerStay2D(Collider2D collision)

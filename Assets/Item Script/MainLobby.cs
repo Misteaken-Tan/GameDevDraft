@@ -35,6 +35,20 @@ public class MainLobby : MonoBehaviour
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
+    public void Backbtn()
+    {
+               Debug.Log("Back Button");
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
+    }
+
+    public void level1 ()
+    {
+        Debug.Log("Level 1");
+        SceneManager.LoadScene(5, LoadSceneMode.Single);
+    }
+
+
+
     public void Exit()
     {
         Debug.Log("The game has closed!");
