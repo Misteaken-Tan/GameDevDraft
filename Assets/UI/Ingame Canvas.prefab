@@ -258,7 +258,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 8593320300091213908, guid: 78d2c246481d2704ba1e50e7e2065fa0, type: 3}
           m_TargetAssemblyTypeName: SidescrollerControls, Assembly-CSharp
           m_MethodName: moveLeft
           m_Mode: 1
@@ -274,7 +274,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 8593320300091213908, guid: 78d2c246481d2704ba1e50e7e2065fa0, type: 3}
           m_TargetAssemblyTypeName: SidescrollerControls, Assembly-CSharp
           m_MethodName: stopMoving
           m_Mode: 1
@@ -529,7 +529,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 8593320300091213908, guid: 78d2c246481d2704ba1e50e7e2065fa0, type: 3}
           m_TargetAssemblyTypeName: SidescrollerControls, Assembly-CSharp
           m_MethodName: moveRight
           m_Mode: 1
@@ -545,7 +545,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 8593320300091213908, guid: 78d2c246481d2704ba1e50e7e2065fa0, type: 3}
           m_TargetAssemblyTypeName: SidescrollerControls, Assembly-CSharp
           m_MethodName: stopMoving
           m_Mode: 1
@@ -677,7 +677,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8593320300091213908, guid: 78d2c246481d2704ba1e50e7e2065fa0, type: 3}
         m_TargetAssemblyTypeName: SidescrollerControls, Assembly-CSharp
         m_MethodName: jump
         m_Mode: 1
