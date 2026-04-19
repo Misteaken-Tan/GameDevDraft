@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 8804226781491271916}
   m_Layer: 5
   m_Name: Pause Canvas
-  m_TagString: Untagged
+  m_TagString: MainUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

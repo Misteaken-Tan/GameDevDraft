@@ -12,10 +12,13 @@ GameObject:
   - component: {fileID: 6449838399254133549}
   - component: {fileID: 8593320300091213908}
   - component: {fileID: 5922605325840721234}
-  - component: {fileID: 7238100658996844353}
   - component: {fileID: 2053568763903419137}
   - component: {fileID: 7349061527065633380}
   - component: {fileID: 8704847161544127852}
+  - component: {fileID: 8934213546054315014}
+  - component: {fileID: 1917623921691049069}
+  - component: {fileID: 4102663783312759591}
+  - component: {fileID: 5954227681366805995}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -85,7 +88,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2382532323433248861, guid: a2c82f3da28371e4086ae2d965bfd7ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -110,10 +113,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SidescrollerControls
   moveSpeed: 10
-  jumpForce: 10
-  mobileControls: 1
+  jumpForce: 15
+  mobileControls: 0
   BaseGravity: 2
-  MaxFallSpeed: 18
+  MaxFallSpeed: 30
   FallMultiplier: 2
   isGrounded: 1
 --- !u!50 &5922605325840721234
@@ -143,52 +146,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &7238100658996844353
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3097391631400177491}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.04200977, y: -1.8097638}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.42, y: 3.72}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.4829878, y: 0.8997977}
-  m_EdgeRadius: 0
 --- !u!114 &2053568763903419137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,3 +226,76 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.7601472, y: 3.9184198}
   m_EdgeRadius: 0
+--- !u!114 &8934213546054315014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097391631400177491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a68e03704e6ad4287749966415d20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!70 &1917623921691049069
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097391631400177491}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.029700696, y: -0.018959641}
+  m_Size: {x: 2.6080287, y: 5.3617563}
+  m_Direction: 0
+--- !u!114 &4102663783312759591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097391631400177491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a68e03704e6ad4287749966415d20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!114 &5954227681366805995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097391631400177491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a68e03704e6ad4287749966415d20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'

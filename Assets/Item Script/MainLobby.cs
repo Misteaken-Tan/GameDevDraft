@@ -47,6 +47,18 @@ public class MainLobby : MonoBehaviour
         SceneManager.LoadScene(5, LoadSceneMode.Single);
     }
 
+    public void level2()
+    {
+        Debug.Log("Level 2");
+        SceneManager.LoadScene(6, LoadSceneMode.Single);
+    }
+
+    public void level3()
+    {
+        Debug.Log("Level 3");
+        SceneManager.LoadScene(7, LoadSceneMode.Single);
+    }
+
 
 
     public void Exit()

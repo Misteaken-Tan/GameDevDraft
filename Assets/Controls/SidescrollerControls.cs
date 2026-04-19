@@ -74,10 +74,12 @@ public class SidescrollerControls : MonoBehaviour
     public void jump()
     {
         // This is the "Gatekeeper" that prevents infinite jumping
+        
         if (isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             isGrounded = false; // Prevents double jump until trigger hits ground again
+            SoundManager.instance.PlaySFX(SoundManager.instance.jumpSound);
         }
     }
 
